@@ -30,6 +30,7 @@ function(register_cpp_sample)
   add_dependencies(${ARG_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
   target_include_directories(${ARG_NAME}
     SYSTEM PRIVATE
+    /home/aurmr/workspaces/zivid_test/temp/usr/include
     ${catkin_INCLUDE_DIRS}
   )
   target_link_libraries(${ARG_NAME}

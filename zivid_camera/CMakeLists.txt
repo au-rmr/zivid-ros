@@ -46,6 +46,7 @@ target_include_directories(
   ${SETTINGS_GENERATOR_TARGET_NAME}
   SYSTEM PRIVATE
   ${catkin_INCLUDE_DIRS}
+  /home/aurmr/workspaces/zivid_test/temp/usr/include
 )
 target_link_libraries(${SETTINGS_GENERATOR_TARGET_NAME} PRIVATE Zivid::Core Boost::filesystem)
 
@@ -170,6 +171,15 @@ target_include_directories(
   PRIVATE
   include
 )
+
+
+
+
+target_include_directories(
+  ${NODELET_NAME}
+  PUBLIC
+  /home/aurmr/workspaces/zivid_test/temp/usr/include
+  )
 target_link_libraries(${NODELET_NAME} ${LIBRARY_NAME} ${catkin_LIBRARIES})
 add_dependencies(
   ${NODELET_NAME}
